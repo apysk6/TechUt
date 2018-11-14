@@ -8,9 +8,9 @@ import ug.arturpysk.techut.zad2.domain.Guitar;
 public interface GuitarManager {
     public void addGuitar(Guitar guitar) throws SQLException;
     public List<Guitar> getAllGuitars() throws SQLException;
-    public List<Guitar> getGuitarsCheaperThan(double price);
+    public List<Guitar> getGuitarsCheaperThan(double price) throws SQLException;
     public Guitar getGuitarById(int id) throws SQLException;
     public void deleteAllGuitars() throws SQLException;
     public void deleteGuitarById(int id) throws SQLException;
-    public boolean addGuitars(List<Guitar> guitars);
+    public boolean addGuitars(List<Guitar> guitars) throws SQLException;
 }
