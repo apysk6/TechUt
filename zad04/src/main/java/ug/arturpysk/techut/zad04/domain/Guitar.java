@@ -7,6 +7,9 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "guitar.all", query = "Select p from Guitar p"),
+})
 public class Guitar {
 	
 	private long id;
@@ -28,6 +31,12 @@ public class Guitar {
 		this.isReserved = isReserved;
 		this.owners = owners;
 		this.serial = serial;
+	}
+	
+	public Guitar(Producer producer, double price, boolean isReserved) {
+		this.producer = producer;
+		this.price = price;
+		this.isReserved = isReserved;
 	}
 	
 	@Id

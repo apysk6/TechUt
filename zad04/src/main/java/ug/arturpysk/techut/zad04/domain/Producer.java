@@ -1,4 +1,7 @@
 package ug.arturpysk.techut.zad04.domain;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -28,5 +31,5 @@ public class Producer {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	}  
 }
