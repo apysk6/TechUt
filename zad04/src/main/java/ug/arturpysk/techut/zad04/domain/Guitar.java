@@ -19,6 +19,7 @@ public class Guitar {
 	
 	private Producer producer;
 	private List<Owner> owners = new ArrayList<Owner>();
+	private List<Bag> cases = new ArrayList<Bag>();
 	private Serial serial;
 	
 	public Guitar () {
@@ -35,6 +36,11 @@ public class Guitar {
 	
 	public Guitar(Producer producer, double price, boolean isReserved) {
 		this.producer = producer;
+		this.price = price;
+		this.isReserved = isReserved;
+	}
+	
+	public Guitar(double price, boolean isReserved) {
 		this.price = price;
 		this.isReserved = isReserved;
 	}
@@ -101,5 +107,14 @@ public class Guitar {
 
 	public void setSerial(Serial serial) {
 		this.serial = serial;
+	}
+	
+	@ManyToMany
+	public List<Bag> getCases() {
+		return cases;
+	}
+	
+	public void setCases(List<Bag> cases) {
+		this.cases = cases;
 	}
 }

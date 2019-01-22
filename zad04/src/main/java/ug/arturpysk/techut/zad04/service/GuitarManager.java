@@ -1,8 +1,9 @@
-package ug.arturpysk.techut.zad04.service;
+package ug.arturpysk.techut.zad04.service; 
 
 import java.util.List;
 
 import ug.arturpysk.techut.zad04.domain.Guitar;
+import ug.arturpysk.techut.zad04.domain.Owner;
 
 public interface GuitarManager {
 
@@ -15,4 +16,10 @@ public interface GuitarManager {
     List<Guitar> getAllGuitars();
 
     Guitar findById(long id);
+    
+    List<Owner> getGuitarOwners(Guitar guitar);
+    void assignGuitarAndCase(long guitarId, long caseId);
+    void assignOwner(long guitarId, long ownerId);
+    void assignSerial(long guitarId, long serialId);
+    
 }

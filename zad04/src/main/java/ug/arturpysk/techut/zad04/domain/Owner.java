@@ -52,6 +52,7 @@ public class Owner {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	//One owner can have many guitars.
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     public List<Guitar> getAllGuitars() {
         return guitars;

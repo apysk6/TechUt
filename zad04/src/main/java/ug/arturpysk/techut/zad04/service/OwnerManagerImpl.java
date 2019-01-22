@@ -2,6 +2,7 @@ package ug.arturpysk.techut.zad04.service;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -42,7 +43,7 @@ public class OwnerManagerImpl implements OwnerManager {
     public void deleteOwner(Owner owner) {
         hsf.getCurrentSession().delete(owner);
     }
-
+    
     @Override
     public void assignGuitar(Long guitarId, Long ownerId) {
         Guitar guitar = (Guitar) hsf.getCurrentSession().get(Guitar.class, guitarId);

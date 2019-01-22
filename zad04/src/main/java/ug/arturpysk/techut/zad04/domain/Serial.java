@@ -7,6 +7,10 @@ public class Serial {
 	private long id;
 	private long serialNumber;
 	
+	public Serial(long serialNumber) {
+		this.serialNumber = serialNumber;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	public long getId() {
