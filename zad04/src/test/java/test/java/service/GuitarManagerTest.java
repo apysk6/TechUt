@@ -17,7 +17,7 @@ import ug.arturpysk.techut.zad04.domain.Guitar;
 import ug.arturpysk.techut.zad04.domain.Owner;
 import ug.arturpysk.techut.zad04.domain.Producer;
 import ug.arturpysk.techut.zad04.domain.Serial;
-import ug.arturpysk.techut.zad04.service.CaseManager;
+import ug.arturpysk.techut.zad04.service.BagManager;
 import ug.arturpysk.techut.zad04.service.GuitarManager;
 import ug.arturpysk.techut.zad04.service.OwnerManager;
 import ug.arturpysk.techut.zad04.service.SerialManager;
@@ -40,7 +40,7 @@ public class GuitarManagerTest {
     SerialManager sm;
     
     @Autowired
-    CaseManager cm;
+    BagManager cm;
     
     @Test
     public void addGuitarTest() {
@@ -146,8 +146,8 @@ public class GuitarManagerTest {
         gm.addGuitar(guitar);
         gm.addGuitar(guitar2);
         
-        cm.addCase(guitarCase);
-        cm.addCase(guitarCase2);
+        cm.addBag(guitarCase);
+        cm.addBag(guitarCase2);
         
         gm.assignGuitarAndCase(guitar.getId(), guitarCase.getId());
         gm.assignGuitarAndCase(guitar.getId(), guitarCase2.getId());

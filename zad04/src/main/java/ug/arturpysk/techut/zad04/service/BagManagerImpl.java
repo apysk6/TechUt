@@ -10,13 +10,13 @@ import ug.arturpysk.techut.zad04.domain.Guitar;
 
 @Component
 @Transactional
-public class CaseManagerImpl implements CaseManager {
+public class BagManagerImpl implements BagManager {
 	
     @Autowired
     SessionFactory hsf;
 	
     @Override
-    public void addCase(Bag guitarCase) {
-        hsf.getCurrentSession().save(guitarCase);
+    public void addBag(Bag guitarBag) {
+        hsf.getCurrentSession().save(guitarBag);
     }
 }
