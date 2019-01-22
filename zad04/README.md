@@ -1,2 +1,18 @@
-Program obs³uguj¹cy za pomoc¹ JDBC bazê HSQL z wykorzystanym tematem "Gitary".
-U¿ytkowanie java persistance
+Projekt na zaliczenie TechUT.
+Temat: Guitar.
+
+Modele:
+- Guitar
+- Bag
+- Producer
+- Owner
+- Serial
+
+Relacje:
+- One-To-One (Guitar - Serial)
+- One-To-Many (Guitar - Owner)
+- One-To-Many (Owner - Guitar)
+- Many-To-One (Guitar - Producer)
+- Many-To-Many (Guitar - Bag)
+
+Aby uruchomiÄ‡ przygotowane testy jednostkowe (16), naleÅ¼y uruchomiÄ‡ skrypty z folder "/scripts", a nastÄ™pnie uÅ¼yÄ‡ komendy "mvn test".
