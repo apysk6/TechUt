@@ -90,7 +90,7 @@ public class Guitar {
 	}
 
 	//One guitar can have many owners.
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	public List<Owner> getOwners() {
 		return owners;
 	}
@@ -100,7 +100,7 @@ public class Guitar {
 	}
 
 	//One guitar can have one serial number.
-	@OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
 	public Serial getSerial() {
 		return serial;
 	}
@@ -109,7 +109,7 @@ public class Guitar {
 		this.serial = serial;
 	}
 	
-	@ManyToMany
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	public List<Bag> getCases() {
 		return cases;
 	}
